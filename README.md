@@ -25,14 +25,14 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
 
    ```apache
    # Backend
-   <VirtualHost api.smartbees-zadanie.local:8080>
-       DocumentRoot "F:/XAMPP/htdocs/SmartbeesCheckout-back/"
+   <VirtualHost api.smartbees-zadanie.local:8080>       //Trzeba pamiętać o podaniu dobrego portu, domyślny to :80, a ja używam :8080
+       DocumentRoot "F:/XAMPP/htdocs/SmartbeesCheckout-back/"              //Trzeba pamiętać o podaniu dobrej ścieżki
        ServerName api.smartbees-zadanie.local
    </VirtualHost>
 
    # Frontend
-   <VirtualHost smartbees-zadanie.local:8080>
-       DocumentRoot "F:/XAMPP/htdocs/SmartbeesCheckout-front/dist"
+   <VirtualHost smartbees-zadanie.local:8080>           //Trzeba pamiętać o podaniu dobrego portu, domyślny to :80, a ja używam :8080
+       DocumentRoot "F:/XAMPP/htdocs/SmartbeesCheckout-front/dist"         //Trzeba pamiętać o podaniu dobrej ścieżki
        ServerName smartbees-zadanie.local
    </VirtualHost>
    ```
@@ -48,11 +48,26 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
     127.0.0.1   smartbees-zadanie.local
     127.0.0.1   api.smartbees-zadanie.local
     ```
-5. **Przejdź w terminalu do folderu SmartbeesCheckout-front i wykonaj**
+5. **Skonfiguruj połączenie z bazą danych w backendzie, oraz domenę backendu we frontendzie**
+
+   Plik do edycji to '/SmartbeesCheckout-back/classes/dbh.class.php'
+    ```
+    private $host = "localhost";     //Adres bazy danych
+    private $port = "4306";          //Port bazy danych
+    private $user = "checkout";      //Nazwa użytnownika który zarządza połączeniamy z bazą danych (Można dać "root")
+    private $pwd = "admin";          //Hasło do użytkownika powyżej (Można dać pustego stringa "") 
+    private $dbname="checkout";      //Nazwa bazy danych (zostawić tak jak jest)
+    ```
+
+   Plik do edycji to ...
+   ```
+   test
+   ```
+6. **Przejdź w terminalu do folderu SmartbeesCheckout-front i wykonaj**
     ```
     npm install
     
     npm run build
     // Można też wykonać 'npm run dev' ale backend nie będzie poprawnie przyjmował zapytań frontendowych
     ```
-6. **Otwórz przeglądarkę i przejdź do adresu smartbees-zadanie.local**
+7. **Otwórz przeglądarkę i przejdź do adresu smartbees-zadanie.local**
