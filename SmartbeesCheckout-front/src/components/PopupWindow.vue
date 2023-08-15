@@ -38,7 +38,7 @@ const inputData = ref('');
 
 const validateDiscount = async () => {
     try {
-        const response = await axios.post(import.meta.env.VITE_APP_BACKEND_URL,
+        const response = await axios.post(import.meta.env.VITE_APP_BACKEND_URL + '/includes/discountcode.inc.php',
             JSON.stringify({
                 code: inputData.value
             }), {

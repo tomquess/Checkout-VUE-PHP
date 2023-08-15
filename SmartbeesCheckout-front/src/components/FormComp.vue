@@ -231,7 +231,7 @@ const submitForm = async () => {
     formData.append('discountcode', exposedDiscountCode.value);
     formData.append('discountcode_status', exposedDiscountStatus.value);
     formData.append('reCaptcha', responseRecaptcha);
-    const response = await axios.post(VITE_APP_BACKEND_URL, formData); // Post
+    const response = await axios.post(VITE_APP_BACKEND_URL + '/includes/order.inc.php', formData); // Post
     // Handle success
     responseMessage.value = response.data.message;
     deliveryCode.value = response.data.deliverycode;
