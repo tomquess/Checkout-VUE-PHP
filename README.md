@@ -16,7 +16,7 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
 
 3. **Konfiguracja serwera**:
 
-   Skonfiguruj "document roots" dla Twojego serwera:
+   Skonfiguruj "document roots" (`\path\xampp\apache\conf\extra\httpd-vhosts.conf`) dla Twojego serwera:
 
    - Dla frontendu: `/path/SmartbeesCheckout-back/` z użyciem adresu URL `smartbees-zadanie.local`
    - Dla backendu: `/path/SmartbeesCheckout-front/dist/` z użyciem adresu URL `api.smartbees-zadanie.local`
