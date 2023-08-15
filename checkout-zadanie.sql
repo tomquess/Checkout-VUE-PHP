@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:4306
--- Czas generowania: 15 Sie 2023, 21:21
+-- Czas generowania: 15 Sie 2023, 23:51
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 7.3.0
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `checkout`
 --
+CREATE DATABASE IF NOT EXISTS `checkout` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `checkout`;
 
 -- --------------------------------------------------------
 
