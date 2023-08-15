@@ -5,7 +5,7 @@
 Przed przystąpieniem do instalacji upewnij się, że spełnione są następujące wymagania:
 
 - PHP 7.3 lub nowsze
-- MySQL
+- MySQL 10.4.22-MariaDB
 - Serwer Apache lub Nginx
 
 ## Przygotowanie aplikacji
