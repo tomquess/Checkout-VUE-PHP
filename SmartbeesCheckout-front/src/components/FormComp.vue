@@ -353,18 +353,18 @@ const submitForm = async () => {
         </span>
         <div class="form__option" id="form__option--payu" v-if="deliveryOption !== 'dpdpobranie'">
           <input type="radio" name="paymenttype" id="payment__payu" class="option__radio--big" value="payu" required>
-          <label for="payu" class="label--separated">PayU</label>
+          <label for="payu" class="label--separated label--payu">PayU</label>
         </div>
         <div class="form__option" id="form__option--upon-receipt"
           v-if="deliveryOption !== 'paczkomat' && deliveryOption !== 'dpd'">
           <input type="radio" name="paymenttype" id="payment__upon-receipt" class="option__radio--big"
             value="upon-receipt" required>
-          <label for="upon-receipt" class="label--separated">Płatność przy odbiorze</label>
+          <label for="upon-receipt" class="label--separated label--wallet">Płatność przy odbiorze</label>
         </div>
         <div class="form__option" id="form__option--bank-transfer" v-if="deliveryOption !== 'dpdpobranie'">
           <input type="radio" name="paymenttype" id="payment__bank-transfer" class="option__radio--big"
             value="bank-transfer" required>
-          <label for="bank-transfer" class="label--separated">Przelew bankowy - zwykły</label>
+          <label for="bank-transfer" class="label--separated label--cheque">Przelew bankowy - zwykły</label>
         </div>
         <button class="button" @click="showPopup" type="button">Dodaj kod rabatowy</button>
         <DiscountPopup :isVisible="isPopupVisible" :closePopup="closePopup" :discountedAmount="exposedDiscountedAmount"
@@ -434,6 +434,9 @@ $background-primary: #f5f5f5;
 
 $inpost-logo: url("../assets/inpost-transparent-bg-whitebg.png");
 $dpd-logo: url("../assets/dpd-logo-transparent.png");
+$wallet-logo: url("../assets/wallet.png");
+$cheque-logo: url("../assets/cheque.png");
+$payu-logo: url("../assets/payu.png");
 
 * {
   box-sizing: border-box;
@@ -576,6 +579,18 @@ textarea.comment {
 
 .label--dpd::before {
   background-image: $dpd-logo;
+}
+
+.label--payu::before {
+  background-image: $payu-logo;
+}
+
+.label--cheque::before {
+  background-image: $cheque-logo;
+}
+
+.label--wallet::before {
+  background-image: $wallet-logo;
 }
 
 .option__radio--big {
