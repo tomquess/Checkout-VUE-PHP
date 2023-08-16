@@ -4,7 +4,7 @@ import { useChallengeV3 } from 'vue-recaptcha/head'
 import { useRecaptchaProvider } from 'vue-recaptcha/head'
 
 import axios from 'axios';
-import PopupWindow from './PopupWindow.vue';
+import DiscountPopup from './DiscountPopup.vue';
 import PostPopup from './PostPopup.vue';
 import LoginPopup from './LoginPopup.vue';
 
@@ -231,7 +231,7 @@ const submitForm = async () => {
     formData.append('discountcode', exposedDiscountCode.value);
     formData.append('discountcode_status', exposedDiscountStatus.value);
     formData.append('reCaptcha', responseRecaptcha);
-    const response = await axios.post(VITE_APP_BACKEND_URL + '/includes/order.inc.php', formData); // Post
+    const response = await axios.post(import.meta.env.VITE_APP_BACKEND_URL + '/includes/order.inc.php', formData); // Post
     // Handle success
     responseMessage.value = response.data.message;
     deliveryCode.value = response.data.deliverycode;
@@ -368,7 +368,7 @@ const submitForm = async () => {
           <label for="bank-transfer" class="label--separated">Przelew bankowy - zwykły</label>
         </div>
         <button class="button" @click="showPopup" type="button">Dodaj kod rabatowy</button>
-        <PopupWindow :isVisible="isPopupVisible" :closePopup="closePopup" :discountedAmount="exposedDiscountedAmount"
+        <DiscountPopup :isVisible="isPopupVisible" :closePopup="closePopup" :discountedAmount="exposedDiscountedAmount"
           :discountStatus="exposedDiscountStatus" :discountCode="exposedDiscountCode"
           @update:discounted-amount="exposedDiscountedAmount = $event"
           @update:discount-status="exposedDiscountStatus = $event" @update:discount-code="exposedDiscountCode = $event" />
