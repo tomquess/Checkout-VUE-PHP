@@ -79,42 +79,42 @@ const isNameValid = computed(() => {
 
 const isSurnameValid = computed(() => {
   if (surnameInput.value === '') {
-    return null; // Initial value, no validation
+    return null;
   }
   return /^[A-Za-z\\-\\'ąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]+$/u.test(surnameInput.value) && (surnameInput.value.length > 2 && surnameInput.value.length < 50);
 });
 
 const isNationValid = computed(() => {
   if (nationInput.value === '') {
-    return null; // Initial value, no validation
+    return null;
   }
   return nationInput.value == 'poland' || nationInput.value == 'other';
 });
 // Ensure Address is good (i only taken into consideration Polish format)
 const isAddressValid = computed(() => {
   if (addressInput.value === '') {
-    return null; // Initial value, no validation
+    return null;
   }
   return /^[\p{L}\d\s\-\.,]+ [\p{L}\d\s\-\.,\/]+$/u.test(addressInput.value) && (addressInput.value.length > 2 && addressInput.value.length < 50);
 });
 
 const isPostcodeValid = computed(() => {
   if (postcodeInput.value === '') {
-    return null; // Initial value, no validation
+    return null;
   }
   return /^\d{2}-\d{3}$/.test(postcodeInput.value) && (postcodeInput.value.length > 2 && postcodeInput.value.length < 12);
 });
 
 const isCityValid = computed(() => {
   if (cityInput.value === '') {
-    return null; // Initial value, no validation
+    return null;
   }
   return /^[\p{L}\s\-]+$/u.test(cityInput.value) && (cityInput.value.length > 2 && cityInput.value.length < 255);
 });
 
 const isPhonenumberValid = computed(() => {
   if (phonenumberInput.value === '') {
-    return null; // Initial value, no validation
+    return null;
   }// With optional country code (not the best regex)
   return /^\+?\d{0,4}\d{9}$/.test(phonenumberInput.value) && (phonenumberInput.value.length > 8 && phonenumberInput.value.length < 15);
 });
@@ -122,7 +122,7 @@ const isPhonenumberValid = computed(() => {
 const isAltAddressValid = computed(() => {
   if (altaddrChecked.value) {
     if (altAddressInput.value === '') {
-      return null; // Initial value, no validation
+      return null;
     }
     return /^[\p{L}\d\s\-\.,]+ [\p{L}\d\s\-\.,\/]+$/u.test(altAddressInput.value) && (altAddressInput.value.length > 2 && altAddressInput.value.length < 50);
   }
@@ -132,7 +132,7 @@ const isAltAddressValid = computed(() => {
 const isAltPostcodeValid = computed(() => {
   if (altaddrChecked.value) {
     if (altPostcodeInput.value === '') {
-      return null; // Initial value, no validation
+      return null;
     }
     return /^\d{2}-\d{3}$/.test(altPostcodeInput.value) && (altPostcodeInput.value.length > 2 && altPostcodeInput.value.length < 12);
   }
@@ -142,7 +142,7 @@ const isAltPostcodeValid = computed(() => {
 const isAltCityValid = computed(() => {
   if (altaddrChecked.value) {
     if (altCityInput.value === '') {
-      return null; // Initial value, no validation
+      return null;
     }
     return /^[\p{L}\s\-]+$/u.test(altCityInput.value) && (altCityInput.value.length > 2 && altCityInput.value.length < 255);
   }
@@ -152,7 +152,6 @@ const isAltCityValid = computed(() => {
 
 
 const isFormValid = computed(() => {
-  // Implement your validation logic here
   return isNameValid.value && isSurnameValid.value && isNationValid.value && isAddressValid.value && isCityValid.value && isPostcodeValid.value && isCityValid.value && isPhonenumberValid.value && isAltAddressValid.value && isAltPostcodeValid.value && isAltCityValid.value;
 
 });
@@ -164,7 +163,7 @@ const showPopup = () => {
   isPopupVisible.value = true;
 };
 
-const exposedDiscountedAmount = ref(0); // Initialize with a default value
+const exposedDiscountedAmount = ref(0);
 const exposedDiscountStatus = ref('');
 const exposedDiscountCode = ref('');
 
