@@ -19,7 +19,7 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
    Skonfiguruj "document roots" (`\path\xampp\apache\conf\extra\httpd-vhosts.conf`) dla Twojego serwera:
 
    - Dla frontendu: `\path\SmartbeesCheckout-back\` z użyciem adresu URL `smartbees-zadanie.local`
-   - Dla backendu: `\path\SmartbeesCheckout-front/dist\` z użyciem adresu URL `api.smartbees-zadanie.local`
+   - Dla backendu: `\path\SmartbeesCheckout-front\dist\` z użyciem adresu URL `api.smartbees-zadanie.local`
 
    Przykład konfiguracji dla serwera Apache:
 
@@ -61,7 +61,7 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
     private $dbname="checkout";      //Nazwa bazy danych (zostawić tak jak jest)
     ```
 
-   Plik do edycji to `/SmartbeesCheckout-front/.env`
+   Plik do edycji to `\SmartbeesCheckout-front\.env`
    ```
    VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080/includes/discountcode.inc.php'  //Zmienić port na domyślny :80, ja używam :8080
    ```
@@ -76,9 +76,9 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
     private $dbname="checkout";      //Nazwa bazy danych (zostawić tak jak jest)
     ```
 
-   Plik do edycji to `/SmartbeesCheckout-front/.env`
+   Plik do edycji to `\SmartbeesCheckout-front\.env`
    ```
-   VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080/includes/discountcode.inc.php'  //Zmienić port na domyślny :80, ja używam :8080
+   VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080'  //Zmienić port na domyślny :80, ja używam :8080
    ```
 6. **Przejdź w terminalu do folderu SmartbeesCheckout-front i wykonaj**
     ```
