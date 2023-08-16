@@ -50,7 +50,11 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
     127.0.0.1   smartbees-zadanie.local
     127.0.0.1   api.smartbees-zadanie.local
     ```
-5. **Skonfiguruj połączenie z bazą danych w backendzie, oraz domenę backendu we frontendzie**
+4. **Zaimportuj bazę danych**:
+
+   Plik do wykonania importu to `checkout-zadanie.sql` w repozytorium.
+   
+6. **Skonfiguruj połączenie z bazą danych w backendzie, oraz domenę backendu we frontendzie**
 
    Plik do edycji to `\SmartbeesCheckout-back\classes\dbh.class.php`
     ```
@@ -88,3 +92,23 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
     // Można też wykonać 'npm run dev' ale backend nie będzie poprawnie przyjmował zapytań frontendowych
     ```
 7. **Otwórz przeglądarkę i przejdź do adresu smartbees-zadanie.local**
+
+
+## Testy
+
+   Aby uruchomić testy przejdź w terminalu do ścieżki `path\SmartbeesCheckout-back`
+   i wykonaj:
+   ```
+   composer update
+
+   ./vendor/bin/phpunit tests/validationtest.php
+   ```
+
+## Kody zniżkowe
+
+   W bazie danych w tabeli `discountcodes` znajdują się domyślnie 3 kody testowe:
+   - Aktywny kod zniżkowy `discount15` na zniżkę 15%
+   - Nieaktywny kod zniżkowy `discount25` na zniżkę 25%
+   - Aktywny kod zniżkowy `test` na zniżkę 50%
+
+     Backend też reaguje na podanie kodu nie istniejącego w bazie danych.
