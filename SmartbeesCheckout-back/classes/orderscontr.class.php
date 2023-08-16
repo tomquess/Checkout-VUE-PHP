@@ -111,13 +111,8 @@ class OrdersContr extends Orders
             $this->alt_city,
             $this->delivery_type,
             $this->payment_type,
-            $this->products,
-            $this->partial_price,
-            $this->full_price,
-            $this->comments,
             $this->newsletter,
-            $this->law,
-            $this->delivery_code
+            $this->law
         );
     }
 }

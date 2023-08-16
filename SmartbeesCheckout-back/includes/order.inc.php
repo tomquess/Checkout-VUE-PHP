@@ -81,6 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Instantiate classes for Orders class purposes, and validation,
     include "../classes/dbh.class.php";
+    include "../classes/validation.class.php";
     include "../classes/orders.class.php";
     include "../classes/orderscontr.class.php";
     include "ValidationException.inc.php";
