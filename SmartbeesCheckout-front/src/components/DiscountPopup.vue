@@ -75,49 +75,49 @@ $background-primary: #f5f5f5;
 $focused: #e8ecfc;
 
 input[type='text'] {
-    width: 40%;
-    height: 24px;
-    margin-bottom: 0.1em;
-    padding-left: 1em;
-    border: none;
-    border: solid 1px #b4aea2;
-    border-radius: 5px;
-    margin-right: auto;
-}
-.input:focus {
-  background-color: $focused;
-}
+  width: 40%;
+  height: 24px;
+  margin-bottom: 0.1em;
+  padding-left: 1em;
+  border: solid 1px #b4aea2;
+  border-radius: 5px;
+  margin-right: auto;
 
+  &:focus {
+    background-color: $focused;
+  }
+}
 
 button {
-    height: 24px;
-    background-color: $background-primary;
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 0.8em;
-    cursor: pointer;
+  height: 24px;
+  background-color: $background-primary;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  cursor: pointer;
 }
 
 .popup-content {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .discount-status {
-    padding: 0.25em 0 0 0.5em;
-    font-size: 0.8em;
-    font-weight: 700;
-}
-.success {
-    color: #008000;
-}
+  padding: 0.25em 0 0 0.5em;
+  font-size: 0.8em;
+  font-weight: 700;
 
-.error {
+  &.success {
+    color: #008000;
+  }
+
+  &.error {
     color: #ff0000;
+  }
 }
 </style>
