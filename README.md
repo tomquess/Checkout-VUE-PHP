@@ -67,7 +67,7 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
 
    Plik do edycji to `\SmartbeesCheckout-front\.env`
    ```
-   VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080/includes/discountcode.inc.php'  //Zmienić port na domyślny :80, ja używam :8080
+   VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080'  //Zmienić port na domyślny :80, ja używam :8080
    ```
 5. **Skonfiguruj połączenie z bazą danych w backendzie, oraz domenę backendu we frontendzie**
 
