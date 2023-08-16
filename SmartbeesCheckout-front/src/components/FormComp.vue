@@ -144,7 +144,7 @@ const isAltCityValid = computed(() => {
     if (altCityInput.value === '') {
       return null; // Initial value, no validation
     }
-    return /^\d{2}-\d{3}$/.test(altCityInput.value) && (altCityInput.value.length > 2 && altCityInput.value.length < 50);
+    return /^[\p{L}\s\-]+$/u.test(altCityInput.value) && (altCityInput.value.length > 2 && altCityInput.value.length < 255);
   }
   return true;
 });
