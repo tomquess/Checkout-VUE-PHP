@@ -40,8 +40,6 @@ class ValidationTest extends TestCase
         Validation::validateName('ThisIsAVeryLongNameThatExceedsTheCharacterLimitThisIsAVeryLongNameThatExceedsTheCharacterLimit');
     }
 
-    // Similar tests for other validation methods...
-
     public function testValidateAltAddressValid()
     {
         $this->expectNotToPerformAssertions();
