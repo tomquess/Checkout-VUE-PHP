@@ -50,7 +50,7 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
     127.0.0.1   smartbees-zadanie.local
     127.0.0.1   api.smartbees-zadanie.local
     ```
-4. **Zaimportuj bazę danych**:
+5. **Zaimportuj bazę danych**:
 
    Plik do wykonania importu to `checkout-zadanie.sql` w repozytorium.
    
@@ -69,29 +69,14 @@ Przed przystąpieniem do instalacji upewnij się, że spełnione są następują
    ```
    VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080'  //Zmienić port na domyślny :80, ja używam :8080
    ```
-5. **Skonfiguruj połączenie z bazą danych w backendzie, oraz domenę backendu we frontendzie**
-
-   Plik do edycji to `\SmartbeesCheckout-back\classes\dbh.class.php`
-    ```
-    private $host = "localhost";     //Adres bazy danych
-    private $port = "4306";          //Port bazy danych
-    private $user = "checkout";      //Nazwa użytnownika który zarządza połączeniamy z bazą danych (Można dać "root")
-    private $pwd = "admin";          //Hasło do użytkownika powyżej (Można dać pustego stringa "") 
-    private $dbname="checkout";      //Nazwa bazy danych (zostawić tak jak jest)
-    ```
-
-   Plik do edycji to `\SmartbeesCheckout-front\.env`
-   ```
-   VITE_APP_BACKEND_URL='http://api.smartbees-zadanie.local:8080'  //Zmienić port na domyślny :80, ja używam :8080
-   ```
-6. **Przejdź w terminalu do folderu SmartbeesCheckout-front i wykonaj**
+7. **Przejdź w terminalu do folderu SmartbeesCheckout-front i wykonaj**
     ```
     npm install
     
     npm run build
     // Można też wykonać 'npm run dev' ale backend nie będzie poprawnie przyjmował zapytań frontendowych
     ```
-7. **Otwórz przeglądarkę i przejdź do adresu smartbees-zadanie.local**
+8. **Otwórz przeglądarkę i przejdź do adresu smartbees-zadanie.local**
 
 
 ## Testy
