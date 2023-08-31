@@ -1,4 +1,4 @@
-# Smartbees Zadanie - Instrukcja instalacji
+# Checkout VUE PHP - Instrukcja instalacji
 
 ## Wymagania
 
